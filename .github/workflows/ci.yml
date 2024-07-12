@@ -2,7 +2,7 @@ name: CI
 on:
   push:
     branches:
-      - "*"
+      - main
   pull_request:
     branches:
       - main
@@ -59,7 +59,7 @@ jobs:
         python-version: 3.9
     - name: Install dependencies
       run: |
-        pip install -U setuptools 
+        pip install -U setuptools
         pip install -U "tox>=4.5.1,<5"
     - run: tox -e lint
   package:
